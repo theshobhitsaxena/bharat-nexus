@@ -60,7 +60,7 @@
             if (file) formData.append('file', file);
 
             try {
-                const res = await fetch('http://127.0.0.1:8000/api/v1/query', { method: 'POST', body: formData });
+               const res = await fetch('https://bharat-nexus-1.onrender.com/api/v1/query', { method: 'POST', body: formData });
                 const data = await res.json();
                 if (res.ok) { responseArea.innerHTML = "<strong>Guidance:</strong><br><br>" + data.response; responseArea.style.display = 'block'; }
                 else alert("Error: " + data.detail);
